@@ -10,6 +10,8 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   /* options */
+  path: "/api/socket_io",
+  addTrailingSlash: false,
 });
 
 const port = process.env.PORT || 3000;
